@@ -1,0 +1,8 @@
+.Home {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  gap: 18px;
+}
