@@ -1,0 +1,48 @@
+.ItemDailyShop {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #222529;
+  margin-bottom: 2.4rem;
+}
+
+.item-daily-shop-img {
+  min-width: 39%;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.item-daily-shop-img img {
+  width: 100%;
+}
+
+.item-daily-shop-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-title {
+  margin: 0;
+  font-weight: 900;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.item-price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vBuck {
+  width: 3rem;
+}
+
+.item-description {
+  padding: 8px;
+}
