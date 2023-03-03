@@ -1,0 +1,17 @@
+
+.News {
+  grid-column: 1;
+  overflow: hidden;
+  min-width: 0;
+}
+
+.news-title {
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  font-weight: 900;
+  margin-bottom: 1.6rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
