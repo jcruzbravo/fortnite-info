@@ -6,3 +6,13 @@
   padding: 2rem;
   gap: 18px;
 }
+
+@media (max-width: 999px) {
+  .Home {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+  
+}
