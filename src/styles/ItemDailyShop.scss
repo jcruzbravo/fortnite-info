@@ -1,10 +1,14 @@
 .ItemDailyShop {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   background: #222529;
   margin-bottom: 2.4rem;
+  transition: transform 0.2s ease-out;
+}
+
+.ItemDailyShop:hover {
+  transform: scale(1.05);
 }
 
 .item-daily-shop-img {
@@ -45,4 +49,12 @@
 
 .item-description {
   padding: 8px;
+  margin: 6px;
+  text-align: center;
+}
+
+@media (max-width: 999px) {
+  .vBuck {
+    width: 1.5rem;
+  }
 }
