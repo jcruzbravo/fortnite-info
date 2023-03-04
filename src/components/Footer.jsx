@@ -6,6 +6,7 @@ import {
   FaGithub,
   FaInstagram,
 } from "react-icons/fa";
+import '../styles/Footer.scss';
 
 const colorFacebook =  '#3b5998';
 const colorTwitter = '#55acee';
