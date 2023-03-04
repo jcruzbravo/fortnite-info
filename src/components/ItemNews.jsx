@@ -2,23 +2,20 @@ import React, { useEffect, useState } from "react";
 import Skeleton from "react-loading-skeleton";
 import "../styles/ItemNews.scss";
 import "react-loading-skeleton/dist/skeleton.css";
+import useLoadingTimeout from "../hooks/useLoadingTimeout";
 
 const ItemNews = ({ noticia }) => {
-  const [isLoading, setIsLoading] = useState(true);
-  useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 4000);
-  }, []);
 
+
+  const isLoading = useLoadingTimeout(4000);
   if (isLoading) {
     return (
       <div className="ItemNews">
         <div className="item-new-image">
           <Skeleton
             count={1}
-            width={500}
-            height={260}
+            width={300}
+            height={195}
             baseColor={"#222529"}
             highlightColor={"#42464c"}
           />
@@ -26,22 +23,19 @@ const ItemNews = ({ noticia }) => {
         <div className="item-new-content">
           <h3 className="new-title"><Skeleton
             count={1}
-            width={420}
-            height={115}
+            width={300}
             baseColor={"#222529"}
             highlightColor={"#42464c"}
           /></h3>
           <h4 className="new-subtitle"><Skeleton
             count={1}
-            width={420}
-            height={24}
+            width={300}
             baseColor={"#222529"}
             highlightColor={"#42464c"}
           /></h4>
           <p className="new-description"><Skeleton
             count={1}
-            width={420}
-            height={72}
+            width={300}
             baseColor={"#222529"}
             highlightColor={"#42464c"}
           /></p>
