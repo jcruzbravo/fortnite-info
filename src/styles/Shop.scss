@@ -1,0 +1,11 @@
+.Shop {
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 50%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  gap: 18px;
+}
