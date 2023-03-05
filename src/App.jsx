@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import Shop from "./container/Shop";
 const Home = lazy(() => import("./container/Home"));
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
             <div className="main-content">
               <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/shop" element={<h1>Hola, soy la tienda</h1>} />
+                <Route path="/shop" element={<Shop/>} />
                 <Route path="/map" element={<h1>Hola, soy el mapa</h1>} />
                 <Route
                   path="/challenges"
