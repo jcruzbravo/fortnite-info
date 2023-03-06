@@ -8,9 +8,11 @@ const Shop = () => {
 
   return (
     <div className="Shop">
-      {fullShop.map((item) => (
-        <ItemShop key={item.mainId} item={item} />
-      ))}
+      <div className="shop-container">
+        {fullShop.map((item) => (
+          <ItemShop key={item.mainId} item={item} />
+        ))}
+      </div>
     </div>
   );
 };
