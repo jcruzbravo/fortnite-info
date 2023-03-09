@@ -3,13 +3,15 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import Spinner from "./components/Spinner";
 import Shop from "./container/Shop";
+import NotFound from "./pages/NotFound";
 const Home = lazy(() => import("./container/Home"));
 
 function App() {
   return (
     <BrowserRouter>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<Spinner/>}>
         <Header />
         <div className="App">
           <main>
@@ -22,6 +24,7 @@ function App() {
                   path="/challenges"
                   element={<h1>Hola, soy el mapa</h1>}
                 />
+                <Route path="*" element={<NotFound/>}/>
               </Routes>
             </div>
           </main>
