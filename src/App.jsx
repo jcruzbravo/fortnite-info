@@ -4,6 +4,7 @@ import "./App.css";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Spinner from "./components/Spinner";
+import Challenges from "./container/Challenges";
 import Shop from "./container/Shop";
 import NotFound from "./pages/NotFound";
 const Home = lazy(() => import("./container/Home"));
@@ -21,7 +22,7 @@ function App() {
                 <Route path="/shop" element={<Shop/>} />
                 <Route
                   path="/challenges"
-                  element={<h1>Hola, soy el mapa</h1>}
+                  element={<Challenges/>}
                 />
                 <Route path="*" element={<NotFound/>}/>
               </Routes>
