@@ -1,0 +1,32 @@
+.ItemChallenge {
+  width: 50%;
+}
+
+.item-challenge-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background: #222529;
+}
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-container {
+  max-width: 240px;
+}
+
+img {
+  width: 100%;
+}
+
+@media (max-width: 999px){
+  .item-challenge-container{
+    flex-direction: column;
+  }
+}
