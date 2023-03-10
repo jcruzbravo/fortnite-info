@@ -31,8 +31,8 @@ const ItemShop = ({ item }) => {
         <div className="item-shop-image">
           <Skeleton
             count={1}
-            width={400}
-            height={400}
+            width={260}
+            height={260}
             baseColor={"#222529"}
             highlightColor={"#42464c"}
           />

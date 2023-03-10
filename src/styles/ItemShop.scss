@@ -8,8 +8,21 @@
 }
 
 .item-shop-content {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.item-shop-content {
+
+  h3 {
+    font-size: 16px;
+  }
+
+   p {
+    font-size: 14px;
+  }
 }
 
 .item-shop-image {
