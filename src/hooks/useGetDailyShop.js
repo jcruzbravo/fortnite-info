@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { endpoints } from "../data/endpoints";
-import { API_KEY } from "../data/endpoints";
+import { endpoints, API_KEY } from "../data/endpoints";
 
 const useGetDailyShop = () => {
   const [item, setItem] = useState([]);
