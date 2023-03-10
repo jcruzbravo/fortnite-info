@@ -19,7 +19,6 @@ function App() {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/shop" element={<Shop/>} />
-                <Route path="/map" element={<h1>Hola, soy el mapa</h1>} />
                 <Route
                   path="/challenges"
                   element={<h1>Hola, soy el mapa</h1>}
