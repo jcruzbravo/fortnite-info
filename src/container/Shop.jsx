@@ -1,6 +1,6 @@
 import React, { useState, lazy, Suspense } from "react";
 const ItemShop = lazy(() => import("../components/ItemShop"));
-import Paginator from "../components/Paginator";
+const Paginator = lazy(() => import("../components/Paginator"));
 import Spinner from "../components/Spinner";
 import useGetFullShop from "../hooks/useGetFullShop";
 import "../styles/Shop.scss";
