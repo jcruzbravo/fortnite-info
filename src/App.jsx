@@ -4,6 +4,7 @@ import "./App.css";
 const Footer = lazy(() => import("./components/Footer"));
 const Header = lazy(() => import("./components/Header"));
 import Spinner from "./components/Spinner";
+const SearchAccount = lazy(() => import("./container/SearchAccount"));
 const Challenges = lazy(() => import("./container/Challenges"));
 const Shop = lazy(() => import("./container/Shop"));
 const NotFound = lazy(() => import("./pages/NotFound"));
@@ -21,6 +22,7 @@ function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/shop" element={<Shop />} />
                 <Route path="/challenges" element={<Challenges />} />
+                <Route path="/search" element={<SearchAccount/>} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </div>
