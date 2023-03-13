@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { endpoints, API_KEY } from "../data/endpoints";
+import { endpoints, API_KEY_FORTNITE_IO } from "../data/endpoints";
 
 const useGetFullShop = () => {
   const [item, setItem] = useState([]);
@@ -9,7 +9,7 @@ const useGetFullShop = () => {
     const loadData = async () => {
       const response = await axios.get(endpoints.FULL_SHOP, {
         headers: {
-          Authorization: API_KEY,
+          Authorization: API_KEY_FORTNITE_IO,
         },
       });
       const data = response.data;
