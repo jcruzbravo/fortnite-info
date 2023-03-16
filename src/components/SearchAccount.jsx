@@ -34,9 +34,7 @@ const SearchAccount = () => {
         ) : Object.keys(statsPlayer).length > 0 ? (
           <Profile key={statsPlayer.account.id} statsPlayer={statsPlayer} />
         ) : (
-          <div>
-            <h3>{message}</h3>
-          </div>
+            <h3 className="message">{message}</h3>
         )}
       </div>
     </section>
