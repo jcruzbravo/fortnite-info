@@ -1,0 +1,63 @@
+.Platform {
+  margin: 12px;
+  padding: 12px;
+}
+
+.platform-container {
+  margin: 12px;
+  padding: 12px;
+}
+
+.platform-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.overall,
+.solo,
+.duo,
+.trio,
+.squad {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #222529;
+  min-height: 120px;
+  padding: 8px;
+  margin: 8px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+  ul {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    color: #ffff99;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 700px) {
+  .overall,
+  .solo,
+  .duo,
+  .trio,
+  .squad {
+    flex-direction: column;
+  }
+
+  .overall,
+  .solo,
+  .duo,
+  .trio,
+  .squad {
+    ul {
+      flex-direction: column;
+
+      li {
+        margin: 0;
+      }
+    }
+  }
+}
