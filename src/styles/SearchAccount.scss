@@ -10,13 +10,21 @@
     gap: 8px;
     align-items: center;
     justify-content: center;
-    padding: 12px;
+    min-width: 100%;
+  }
+
+  .account-player-stats-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 8px;
   }
 
   input {
     width: 360px;
     color: #111;
-    background: #FFF;
+    background: #fff;
     padding: 0.4rem 3.5rem 0.4rem 0.6rem;
     border: unset;
     outline: none;
@@ -27,4 +35,18 @@
 
 .account-player-stats-form button {
   margin-left: 8px;
+}
+
+.account-player-stats-form button:hover {
+  cursor: pointer;
+}
+
+.message {
+  color: #FF8C00;
+}
+
+@media (max-width: 700px) {
+  .account-player-stats-form {
+    flex-direction: column;
+  }
 }

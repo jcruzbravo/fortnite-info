@@ -21,10 +21,9 @@ const useGetStatsPlayer = () => {
       );
 
       const data = response.data.data;
-      setStatsPlayer(data)
-
+      setStatsPlayer(data);
     } catch (error) {
-      if(error.response.status === 403){
+      if (error.response.status === 403) {
         setMessage("The requested account's stats are not public");
       }
       if (error.response.status === 400) {
@@ -43,6 +42,12 @@ const useGetStatsPlayer = () => {
     setUsernameInput(event.target.value);
   };
 
-  return { statsPlayer, message, isLoading, handleSearch, handleInput };
+  return {
+    statsPlayer,
+    message,
+    isLoading,
+    handleSearch,
+    handleInput,
+  };
 };
 export default useGetStatsPlayer;
