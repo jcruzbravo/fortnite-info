@@ -3,6 +3,7 @@ import useGetStatsPlayer from "../hooks/useGetStatsPlayer";
 import "../styles/SearchAccount.scss";
 import Spinner from "./Spinner";
 import Profile from "../container/Profile";
+import { MdPersonSearch } from "react-icons/md";
 
 const SearchAccount = () => {
   const {
@@ -26,7 +27,9 @@ const SearchAccount = () => {
               value={usernameInput}
               onChange={handleInput}
             />
-            <button onClick={handleSearch}>Search</button>
+            <button onClick={handleSearch}>
+              <MdPersonSearch size={30}/>
+            </button>
           </div>
         </div>
         {isLoading ? (
@@ -34,7 +37,7 @@ const SearchAccount = () => {
         ) : Object.keys(statsPlayer).length > 0 ? (
           <Profile key={statsPlayer.account.id} statsPlayer={statsPlayer} />
         ) : (
-            <h3 className="message">{message}</h3>
+          <h3 className="message">{message}</h3>
         )}
       </div>
     </section>
