@@ -1,11 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import logo from "../assets/logo.png";
+import { GiHamburgerMenu } from "react-icons/gi";
 import "../styles/Header.scss";
+import MenuMobile from "./MenuMobile";
 
 const Header = () => {
+  const [showMenu, setShowMenu] = useState(false);
+  const handleMenuClick = () => {
+    setShowMenu(!showMenu);
+  };
   return (
     <header>
+      <div className="menu-mobile-icon" onClick={() => handleMenuClick()}>
+        <GiHamburgerMenu />
+      </div>
+      {showMenu && <MenuMobile/>}
       <Link to="/">
         <img src={logo} alt="home" />
       </Link>
