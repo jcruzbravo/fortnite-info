@@ -44,6 +44,10 @@ const StatsPlayer = ({ statsPlayer }) => {
       </div>
 
       <div className="stats">
+        <div className="name-level-battle-pass">
+          <h3>{`Name: ${statsPlayer.account.name}`}</h3>
+          <h4>{`Level Battle Pass: ${statsPlayer.battlePass.level}`}</h4>
+        </div>
         {platforms && <Platform stats={statsPlayer.stats[platforms]} />}
       </div>
     </div>
