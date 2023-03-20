@@ -3,7 +3,7 @@ import axios from "axios";
 import { endpoints, API_KEY_FORTNITE_IO } from "../data/endpoints";
 
 const useGetLastUpdateShop = () => {
-  const [date, setDate] = useState(null);
+  const [date, setDate] = useState("");
 
   useEffect(() => {
     const loadData = async () => {
@@ -17,9 +17,9 @@ const useGetLastUpdateShop = () => {
       setDate(date);
     };
     loadData();
-  }, []);
+  }, [date]);
 
-  return date;
+  return { date };
 };
 
 export default useGetLastUpdateShop;
