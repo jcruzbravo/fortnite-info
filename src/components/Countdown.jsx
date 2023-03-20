@@ -2,42 +2,41 @@ import React, { useState, useEffect } from "react";
 import useGetLastUpdateShop from "../hooks/useGetLastUpdateShop";
 
 const Countdown = () => {
-  const [timeRemaining, setTimeRemaining] = useState(0);
-  const fortniteStoreLastUpdate = useGetLastUpdateShop();
+  const [timeRemaining, setTimeRemaining] = useState("");
+  const { date } = useGetLastUpdateShop();
 
   useEffect(() => {
     const now = new Date();
-    const target = new Date(fortniteStoreLastUpdate);
-    const hours1 = target.getHours();
-    const minutes1 = target.getMinutes();
-    const seconds1 = target.getSeconds();
-    const miliseconds1 = target.getMilliseconds();
-    target.setHours(hours1);
-    target.setMinutes(minutes1);
-    target.setSeconds(seconds1);
-    target.setMilliseconds(miliseconds1);
+    const target = new Date(date);
+    const hoursTarget = target.getHours();
+    const minutesTarget = target.getMinutes();
+    const secondsTarget = target.getSeconds();
+    target.setHours(hoursTarget);
+    target.setMinutes(minutesTarget);
+    target.setSeconds(secondsTarget);
 
     if (now > target) {
       target.setDate(target.getDate() + 1);
     }
 
-    const intervalId = setInterval(() => {
+    const interval = setInterval(() => {
       const difference = target - now;
-      const hours = Math.floor(difference / 1000 / 60 / 60);
-      const minutes = Math.floor((difference / 1000 / 60) % 60);
-      const seconds = Math.floor((difference / 1000) % 60);
+      const hoursDifference = Math.floor(difference / 1000 / 60 / 60);
+      const minutesDifference = Math.floor((difference / 1000 / 60) % 60);
+      const secondsDifference = Math.floor((difference / 1000) % 60);
+
       setTimeRemaining(
-        `Refreshes In ${hours} hours ${minutes} minutes ${seconds} seconds remaining until the Fortnite store updates.`
+        `${hoursDifference} hours ${minutesDifference} minutes ${secondsDifference} seconds remaining until the Fortnite store updates.`
       );
     }, 1000);
 
     return () => {
-      clearInterval(intervalId);
+      clearInterval(interval);
     };
   }, [timeRemaining]);
 
   return (
-    <div>
+    <div className="Countdown">
       <p>{`${timeRemaining}`}</p>
     </div>
   );
