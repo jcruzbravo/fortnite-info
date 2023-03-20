@@ -63,6 +63,17 @@ const Platform = ({ stats }) => {
               </ul>
             </div>
           )}
+          {stats != null && stats.ltm != null && (
+            <div className="ltm">
+            <h3>Limited Time Mode</h3>
+            <ul>
+              <li>{`Winrate: ${stats.squad.winRate}`}</li>
+              <li>{`Wins: ${stats.squad.wins}`}</li>
+              <li>{`Kd: ${stats.squad.kd}`}</li>
+              <li>{`Kills: ${stats.squad.kills}`}</li>
+            </ul>
+          </div>
+          )}
         </div>
       </div>
     </div>
