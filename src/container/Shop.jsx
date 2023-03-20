@@ -1,4 +1,5 @@
 import React, { useState, lazy, Suspense } from "react";
+import Countdown from "../components/Countdown";
 const ItemShop = lazy(() => import("../components/ItemShop"));
 const Paginator = lazy(() => import("../components/Paginator"));
 import Spinner from "../components/Spinner";
@@ -12,18 +13,20 @@ const Shop = () => {
 
   const maximum = Math.ceil(fullShop.length / byPage);
 
+
   return (
-    <Suspense fallback={<Spinner/>}>
+    <Suspense fallback={<Spinner />}>
       <div className="Shop">
-      <div className="shop-container">
-        {fullShop
-          .slice((page - 1) * byPage, (page - 1) * byPage + byPage)
-          .map((item) => (
-            <ItemShop key={item.mainId} item={item} />
-          ))}
+        <Countdown/>
+        <div className="shop-container">
+          {fullShop
+            .slice((page - 1) * byPage, (page - 1) * byPage + byPage)
+            .map((item) => (
+              <ItemShop key={item.mainId} item={item} />
+            ))}
+        </div>
+        <Paginator page={page} setPage={setPage} maximum={maximum} />
       </div>
-      <Paginator page={page} setPage={setPage} maximum={maximum} />
-    </div>
     </Suspense>
   );
 };
