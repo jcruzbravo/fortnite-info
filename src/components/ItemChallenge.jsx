@@ -3,9 +3,6 @@ import "../styles/ItemChallenge.scss";
 
 const ItemChallenge = ({ challenge }) => {
   const bundles = challenge.bundles;
-  /*
-   * Future use: const bundlesWithQuestActives = bundles.filter(bundle => bundle.quests.some(quest => quest.enabled === true));
-   */
   return (
     <div className="ItemChallenge">
       <div className="item-challenge-container">

@@ -7,22 +7,21 @@ import Spinner from "../components/Spinner";
 
 const Challenges = () => {
   const challenges = useGetChallenges();
-  const challengesWithImageAndBundleName = challenges.filter(
-    (challenge) => challenge.name != null && challenge.image != null
-  );
-
   const [page, setPage] = useState(1);
   const [byPage, setbyPage] = useState(1);
-  const maximum = Math.ceil(challengesWithImageAndBundleName.length / byPage);
+  const maximum = Math.ceil(challenges.length / byPage);
 
   return (
-    <Suspense fallback={<Spinner/>}>
+    <Suspense fallback={<Spinner />}>
       <section>
         <div className="Challenges">
-          {challengesWithImageAndBundleName
+          {challenges
             .slice((page - 1) * byPage, (page - 1) * byPage + byPage)
             .map((challenge) => (
-              <ItemChallenge key={challenge.tag} challenge={challenge} />
+              <ItemChallenge
+                key={`${challenge.tag}-${challenge.name}`}
+                challenge={challenge}
+              />
             ))}
         </div>
         <Paginator page={page} setPage={setPage} maximum={maximum} />
