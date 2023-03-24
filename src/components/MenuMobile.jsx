@@ -8,6 +8,9 @@ const MenuMobile = () => {
       <div className="menu-mobile-container">
         <ul>
           <li>
+            <NavLink to="/home">Home</NavLink>
+          </li>
+          <li>
             <NavLink to="/shop">Shop</NavLink>
           </li>
           <li>

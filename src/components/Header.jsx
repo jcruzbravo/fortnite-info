@@ -10,17 +10,21 @@ const Header = () => {
   const handleMenuClick = () => {
     setShowMenu(!showMenu);
   };
+
   return (
     <header>
       <div className="menu-mobile-icon" onClick={() => handleMenuClick()}>
         <GiHamburgerMenu />
       </div>
-      {showMenu && <MenuMobile/>}
-      <Link to="/">
+      {showMenu && <MenuMobile />}
+      <Link to="/home">
         <img src={logo} alt="home" />
       </Link>
       <nav>
         <ul>
+          <li>
+            <NavLink to="/home">Home</NavLink>
+          </li>
           <li>
             <NavLink to="/shop">Shop</NavLink>
           </li>
