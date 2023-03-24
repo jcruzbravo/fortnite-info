@@ -20,6 +20,6 @@ const useGetFullShop = () => {
   }, []);
 
   return item;
-}
+};
 
 export default useGetFullShop;

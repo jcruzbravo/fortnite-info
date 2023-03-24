@@ -44,15 +44,9 @@
   .solo,
   .duo,
   .trio,
-  .squad {
+  .squad,
+  .ltm {
     flex-direction: column;
-  }
-
-  .overall,
-  .solo,
-  .duo,
-  .trio,
-  .squad {
     ul {
       flex-direction: column;
 

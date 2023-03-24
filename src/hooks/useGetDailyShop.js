@@ -20,6 +20,6 @@ const useGetDailyShop = () => {
   }, []);
 
   return item;
-}
+};
 
 export default useGetDailyShop;
