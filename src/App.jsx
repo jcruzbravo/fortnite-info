@@ -1,5 +1,6 @@
 import { lazy, Suspense } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Analytics } from "@vercel/analytics/react";
 import "./App.css";
 const Footer = lazy(() => import("./components/Footer"));
 const Header = lazy(() => import("./components/Header"));
@@ -22,12 +23,13 @@ function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/shop" element={<Shop />} />
                 <Route path="/challenges" element={<Challenges />} />
-                <Route path="/search" element={<Account/>} />
+                <Route path="/search" element={<Account />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </div>
           </main>
         </div>
+        <Analytics />
         <Footer />
       </Suspense>
     </BrowserRouter>
