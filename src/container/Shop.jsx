@@ -1,5 +1,5 @@
 import React, { useState, lazy, Suspense } from "react";
-const Countdown = lazy(() => import("../components/Countdown"));
+import Countdown from "../components/Countdown";
 const ItemShop = lazy(() => import("../components/ItemShop"));
 const Paginator = lazy(() => import("../components/Paginator"));
 import Spinner from "../components/Spinner";
