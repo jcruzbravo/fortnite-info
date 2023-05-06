@@ -5,6 +5,7 @@ import "../styles/News.scss";
 
 const News = () => {
   const noticias = useGetNews();
+  console.log(noticias);
   return (
     <div className="News">
       <article>

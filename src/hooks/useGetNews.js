@@ -8,6 +8,7 @@ const useGetNews = () => {
   useEffect(() => {
     const loadData = async () => {
       const response = await axios.get(endpoints.NEWS);
+      console.log(response);
       const data = response.data;
       setNews(data);
     };

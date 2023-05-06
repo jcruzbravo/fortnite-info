@@ -8,6 +8,7 @@ const useGetDailyShop = () => {
   useEffect(() => {
     const loadData = async () => {
       const response = await axios.get(endpoints.DAILY_SHOP);
+      console.log(response);
       const data = response.data;
       setItem(data);
     };
