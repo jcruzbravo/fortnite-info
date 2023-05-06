@@ -1,19 +1,14 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { endpoints, API_KEY_FORTNITE_IO } from "../data/endpoints";
+import { endpoints } from "../data/endpoints";
 
 const useGetChallenges = () => {
   const [challenges, setChallenges] = useState([]);
 
   useEffect(() => {
     const loadData = async () => {
-      const response = await axios.get(endpoints.CHALLENGES, {
-        headers: {
-          Authorization: API_KEY_FORTNITE_IO,
-        },
-      });
-      const data = response.data;
-      const bundles = data.bundles;
+      const response = await axios.get(endpoints.CHALLENGES);
+      const bundles = response.data;
       setChallenges(bundles);
     };
     loadData();

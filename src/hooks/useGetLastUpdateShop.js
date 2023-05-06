@@ -1,17 +1,13 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { endpoints, API_KEY_FORTNITE_IO } from "../data/endpoints";
+import { endpoints } from "../data/endpoints";
 
 const useGetLastUpdateShop = () => {
   const [date, setDate] = useState("");
 
   useEffect(() => {
     const loadData = async () => {
-      const response = await axios.get(endpoints.FULL_SHOP, {
-        headers: {
-          Authorization: API_KEY_FORTNITE_IO,
-        },
-      });
+      const response = await axios.get(endpoints.FULL_SHOP);
       const data = response.data;
       const date = data.lastUpdate.date;
       setDate(date);
