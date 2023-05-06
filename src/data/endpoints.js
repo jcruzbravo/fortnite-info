@@ -1,4 +1,4 @@
-const API_BASE_URL = process.env.VITE_API_URL || 'http://localhost:3000';
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
 
 export const endpoints = {
   DAILY_SHOP: `${API_BASE_URL}/api/daily_shop`,
