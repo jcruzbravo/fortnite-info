@@ -1,11 +1,9 @@
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
+
 export const endpoints = {
-  DAILY_SHOP: "https://fortniteapi.io/v2/shop?lang=en",
-  NEWS: "https://fortniteapi.io/v1/news?lang=en&type=br",
-  FULL_SHOP: "https://fortniteapi.io/v2/shop?lang=en",
-  CHALLENGES: "https://fortniteapi.io/v3/challenges?season=current&lang=en",
-  STATS_PLAYER: "https://fortnite-api.com/v2/stats/br/v2",
+  DAILY_SHOP: `${API_BASE_URL}/api/daily_shop`,
+  NEWS: `${API_BASE_URL}/api/news`,
+  FULL_SHOP: `${API_BASE_URL}/api/full_shop`,
+  CHALLENGES: `${API_BASE_URL}/api/challenges`,
+  STATS_PLAYER: `${API_BASE_URL}/api/stats_player`,
 };
-
-export const API_KEY_FORTNITE_IO = "c347d320-0c236446-aaff81e9-9ecffd56";
-
-export const API_KEY_FORTNITE = "a399d3b6-f709-431a-b8cb-b88843271ab2";
