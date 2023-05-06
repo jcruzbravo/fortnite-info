@@ -4,7 +4,7 @@ import { endpoints } from "./endpoints.js";
 import * as dotenv from "dotenv";
 import cors from "cors";
 
-dotenv.config();
+dotenv.config({ path: "../.env" });
 const app = express();
 const port = 3000;
 
