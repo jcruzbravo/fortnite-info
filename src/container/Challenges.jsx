@@ -8,7 +8,7 @@ import Spinner from "../components/Spinner";
 const Challenges = () => {
   const challenges = useGetChallenges();
   const [page, setPage] = useState(1);
-  const [byPage, setbyPage] = useState(1);
+  const [byPage, setByPage] = useState(1);
   const maximum = Math.ceil(challenges.length / byPage);
 
   return (

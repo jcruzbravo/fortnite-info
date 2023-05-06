@@ -28,14 +28,19 @@ const SearchAccount = () => {
               onChange={handleInput}
             />
             <button onClick={handleSearch}>
-              <MdPersonSearch size={30}/>
+              <MdPersonSearch size={30} />
             </button>
           </div>
         </div>
+
         {isLoading ? (
           <Spinner />
-        ) : Object.keys(statsPlayer).length > 0 ? (
-          <Profile key={statsPlayer.account.id} statsPlayer={statsPlayer} />
+        ) : (statsPlayer != undefined) || (statsPlayer != null) ? (
+          Object.keys(statsPlayer).length > 0 ? (
+            <Profile key={statsPlayer.account.id} statsPlayer={statsPlayer} />
+          ) : (
+            <h3 className="message">{message}</h3>
+          )
         ) : (
           <h3 className="message">{message}</h3>
         )}
