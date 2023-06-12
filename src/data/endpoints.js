@@ -6,4 +6,6 @@ export const endpoints = {
   FULL_SHOP: `${API_BASE_URL}/api/full_shop`,
   CHALLENGES: `${API_BASE_URL}/api/challenges`,
   STATS_PLAYER: `${API_BASE_URL}/api/stats_player`,
+  BATTLEPASS: `${API_BASE_URL}/api/battlepass`,
+  SEASON_INFO: `${API_BASE_URL}/api/season_info`,
 };
