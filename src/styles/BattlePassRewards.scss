@@ -1,0 +1,35 @@
+.BattlePassRewards {
+  max-width: 880px;
+  margin: 16px auto;
+  padding: 2rem;
+
+}
+
+.battle-pass-rewards-container {
+  display: grid;
+  grid-template-columns: 3fr 3fr 3fr;
+  margin: 0 auto;
+  gap: 18px;
+}
+
+.info-season-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+
+}
+
+
+.dates {
+  display: flex;
+  justify-content: space-between;
+}
+
+.info-season {
+  font-weight: bold;
+  color: purple;
+  span {
+    color: yellow;
+    font-weight: 400;
+  }
+}
