@@ -102,6 +102,33 @@ app.get("/api/stats_player", async (req, res) => {
   }
 });
 
+app.get("/api/battlepass", async (req, res) => {
+  const response = await axios.get(endpoints.BATTLEPASS, {
+    headers: {
+      Authorization: process.env.API_KEY_FORTNITE_IO,
+      "Content-Type": "application/json;charset=UTF-8",
+      "Access-Control-Allow-Origin": "*",
+    },
+    data: {},
+  });
+  const data = response.data;
+  const rewards = data.rewards;
+  res.send(rewards);
+})
+
+app.get("/api/season_info", async (req, res) => {
+  const response = await axios.get(endpoints.BATTLEPASS, {
+    headers: {
+      Authorization: process.env.API_KEY_FORTNITE_IO,
+      "Content-Type": "application/json;charset=UTF-8",
+      "Access-Control-Allow-Origin": "*",
+    },
+    data: {},
+  });
+  const data = response.data;
+  res.send(data);
+})
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });
