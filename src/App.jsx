@@ -10,6 +10,7 @@ const Challenges = lazy(() => import("./container/Challenges"));
 const Shop = lazy(() => import("./container/Shop"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const Home = lazy(() => import("./container/Home"));
+const BattlePassRewards = lazy(() => import("./container/BattlePassRewards"));
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
                 <Route path="/shop" element={<Shop />} />
                 <Route path="/challenges" element={<Challenges />} />
                 <Route path="/search" element={<Account />} />
+                <Route path="/battlepass-rewards" element={<BattlePassRewards />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </div>

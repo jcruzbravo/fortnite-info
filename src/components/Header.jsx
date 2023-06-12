@@ -34,6 +34,9 @@ const Header = () => {
           <li>
             <NavLink to="/search">Search Account</NavLink>
           </li>
+          <li>
+            <NavLink to="/battlepass-rewards">Battle Pass rewards</NavLink>
+          </li>
         </ul>
       </nav>
     </header>
