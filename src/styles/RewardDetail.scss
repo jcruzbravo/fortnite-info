@@ -1,0 +1,74 @@
+.RewardDetail {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  width: 380px;
+  height: calc(100vh - 174px);
+  top: 70px;
+  right: 0;
+  background-color: #222529;
+  border: 1px solid #4c525a;
+  border-radius: 5px;
+}
+
+.hidden {
+  display: none;
+}
+
+.close-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.icon-close-container {
+  cursor: pointer;
+}
+
+.detail-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px;
+}
+
+.detail {
+  overflow-y: scroll;
+}
+
+.image-container {
+  padding: 0 6px;
+  
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem;
+  }
+
+}
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 6px;
+
+  .description {
+    width: 100%;
+  }
+
+  .price {
+    display: flex;
+    gap: 8px;
+  }
+
+  p {
+    font-size: 1.25rem;
+    color: white;
+  }
+
+  span {
+    font-size: 1rem;
+    color: yellow;
+  }
+}
