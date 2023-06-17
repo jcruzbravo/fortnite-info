@@ -4,6 +4,7 @@ import useGetSeasonInfo from "../hooks/useGetSeasonInfo";
 import Reward from "../components/Reward";
 const Paginator = lazy(() => import("../components/Paginator"));
 import "../styles/BattlePassRewards.scss";
+import RewardDetail from "../components/RewardDetail";
 
 const BattlePassRewards = () => {
   const rewards = useGetBattlePassRewards();
@@ -52,6 +53,7 @@ const BattlePassRewards = () => {
             View trailer
           </a>
         ))} */}
+        <RewardDetail />
     </article>
   );
 };
