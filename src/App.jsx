@@ -1,6 +1,7 @@
 import { lazy, Suspense } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Analytics } from "@vercel/analytics/react";
+import FortniteInformerProvider from "./context";
 import "./App.css";
 const Footer = lazy(() => import("./components/Footer"));
 const Header = lazy(() => import("./components/Header"));
@@ -14,6 +15,7 @@ const BattlePassRewards = lazy(() => import("./container/BattlePassRewards"));
 
 function App() {
   return (
+    <FortniteInformerProvider>
     <BrowserRouter>
       <Suspense fallback={<Spinner />}>
         <Header />
@@ -35,6 +37,7 @@ function App() {
         <Footer />
       </Suspense>
     </BrowserRouter>
+    </FortniteInformerProvider>
   );
 }
 
