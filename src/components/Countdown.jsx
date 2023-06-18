@@ -7,13 +7,11 @@ const Countdown = () => {
 
   useEffect(() => {
     const now = new Date();
-    const target = new Date(date);
-    const hoursTarget = target.getHours();
-    const minutesTarget = target.getMinutes();
-    const secondsTarget = target.getSeconds();
-    target.setHours(hoursTarget);
-    target.setMinutes(minutesTarget);
-    target.setSeconds(secondsTarget);
+    const target = new Date(date || Date.now());
+
+    target.setHours(target.getHours());
+    target.setMinutes(target.getMinutes());
+    target.setSeconds(target.getSeconds());
 
     if (now > target) {
       target.setDate(target.getDate() + 1);
