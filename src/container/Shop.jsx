@@ -1,4 +1,4 @@
-import React, { useState, lazy, Suspense } from "react";
+import React, { useState, lazy, Suspense, useEffect } from "react";
 import Countdown from "../components/Countdown";
 const ItemShop = lazy(() => import("../components/ItemShop"));
 const Paginator = lazy(() => import("../components/Paginator"));
@@ -11,21 +11,36 @@ const Shop = () => {
   const [page, setPage] = useState(1);
   const [byPage, setbyPage] = useState(6);
 
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const simulateLoading = () => {
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 5000);
+    };
+    simulateLoading();
+  });
+
   const maximum = Math.ceil(fullShop.length / byPage);
 
   return (
     <Suspense fallback={<Spinner />}>
-      <div className="Shop">
-        <Countdown />
-        <div className="shop-container">
-          {fullShop
-            .slice((page - 1) * byPage, (page - 1) * byPage + byPage)
-            .map((item) => (
-              <ItemShop key={item.mainId} item={item} />
-            ))}
+      {isLoading ? (
+        <Spinner />
+      ) : (
+        <div className="Shop">
+          <Countdown />
+          <div className="shop-container">
+            {fullShop
+              .slice((page - 1) * byPage, (page - 1) * byPage + byPage)
+              .map((item) => (
+                <ItemShop key={item.mainId} item={item} />
+              ))}
+          </div>
+          <Paginator page={page} setPage={setPage} maximum={maximum} />
         </div>
-        <Paginator page={page} setPage={setPage} maximum={maximum} />
-      </div>
+      )}
     </Suspense>
   );
 };
